@@ -4223,7 +4223,7 @@ void TR_LoopVersioner::versionNaturalLoop(TR_RegionStructure *whileLoop, List<TR
          if (numIters < 0.90*(MAX_BLOCK_COUNT+MAX_COLD_BLOCK_COUNT))
             _canPredictIters = false;
          }
-
+#if 0 // for GPU parallelization
       if (!refineAliases() && _canPredictIters && comp()->getProfilingMode() != JitProfiling &&
           performTransformation(comp(), "%s Creating test outside loop for deciding if async check is required\n", OPT_DETAILS_LOOP_VERSIONER))
          {
@@ -4257,7 +4257,9 @@ void TR_LoopVersioner::versionNaturalLoop(TR_RegionStructure *whileLoop, List<TR
          if (trace())
             traceMsg(comp(), "Marked block %p with entry %p\n", whileLoop->getEntryBlock(), whileLoop->getEntryBlock()->getEntry()->getNode());
          }
+#endif
       }
+
 
    // Construct the tests for invariant expressions that need
    // to be null checked.
