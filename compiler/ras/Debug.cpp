@@ -3669,6 +3669,7 @@ TR_Debug::getRuntimeHelperName(int32_t index)
          case TR_getStateGPU:               return "getStateGPU";
          case TR_flushGPU:                  return "flushGPU";
          case TR_callGPU:                   return "callGPU";
+         case TR_registerCPUTime:           return "registerCPUTime";
 
          case TR_newObject:                 return "jitNewObject";
          case TR_newObjectNoZeroInit:       return "jitNewObjectNoZeroInit";

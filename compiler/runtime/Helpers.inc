@@ -115,7 +115,8 @@ SETVAL(TR_invalidateGPU,TR_transactionExit+18)
 SETVAL(TR_getStateGPU,TR_transactionExit+19)
 SETVAL(TR_flushGPU,TR_transactionExit+20)
 SETVAL(TR_callGPU,TR_transactionExit+21)
-SETVAL(TR_lastGPUHelper,TR_transactionExit+21)
+SETVAL(TR_registerCPUTime, TR_transactionExit+22)
+SETVAL(TR_lastGPUHelper,TR_transactionExit+22)
 
 SETVAL(TR_FSRH, TR_lastGPUHelper+1)
 
